@@ -219,6 +219,7 @@ a {
         grid-template-rows: 1fr 1fr;
     }
     #VIN{
+        border: 0.2rem solid #389595;
         border-bottom: 0;
     }
 

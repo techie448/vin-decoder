@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Courier, monospace;
+
+}
+body {
+    background-color: #44aadd;
+    margin: 0;
+    text-align: center;
+    animation: body 3s forwards;
+}
+form {
+    width: 80vw;
+    max-width: 60rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-items: stretch;
+    padding-top: 5rem;
+
+}
+h1,#result{
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+input {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    border-right: 0;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+input::placeholder{
+    color:white;
+    opacity:0.7;
+}
+input:focus {outline:none;}
+
+#VIN{
+    background-color: #4D4D4D;
+    border: 0.2rem solid #FF492E;
+    border-right: 0;
+    text-transform: uppercase;
+}
+
+#submit{
+    background-color: #FF492E;
+    border: 0;
+}
+
+#submit:hover{
+    cursor: pointer;
+}
+
+
+h1,h2{
+    cursor: default;
+}
+
+
+.icon{
+    float: right;
+}
+.icon .api{
+    line-height: 3.5rem;
+    margin: 1rem;
+
+}
+.icon .github{
+    background: url("/github.png");
+    background-size: cover;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+    float: right;
+
+}
+
+a {
+    color: inherit;
+}
+
+.loader p {
+    margin: 1rem;
+}
+
+.loader span{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    display:inline-block;
+    position:absolute;
+    left:50%;
+    margin-left:-10px;
+    -webkit-animation:3s infinite linear;
+    -moz-animation:3s infinite linear;
+    -o-animation:3s infinite linear;
+
+}
+
+
+.loader span:nth-child(2){
+    background:#E84C3D;
+    -webkit-animation:kiri 1.2s infinite linear;
+    -moz-animation:kiri 1.2s infinite linear;
+    -o-animation:kiri 1.2s infinite linear;
+
+}
+.loader span:nth-child(3){
+    background:#F1C40F;
+    z-index:100;
+}
+.loader span:nth-child(4){
+    background:#2FCC71;
+    -webkit-animation:kanan 1.2s infinite linear;
+    -moz-animation:kanan 1.2s infinite linear;
+    -o-animation:kanan 1.2s infinite linear;
+}
+
+
+@-webkit-keyframes kanan {
+    0% {-webkit-transform:translateX(20px);
+    }
+
+    50%{-webkit-transform:translateX(-20px);
+    }
+
+    100%{-webkit-transform:translateX(20px);
+        z-index:200;
+    }
+}
+@-moz-keyframes kanan {
+    0% {-moz-transform:translateX(20px);
+    }
+
+    50%{-moz-transform:translateX(-20px);
+    }
+
+    100%{-moz-transform:translateX(20px);
+        z-index:200;
+    }
+}
+@-o-keyframes kanan {
+    0% {-o-transform:translateX(20px);
+    }
+
+    50%{-o-transform:translateX(-20px);
+    }
+
+    100%{-o-transform:translateX(20px);
+        z-index:200;
+    }
+}
+
+
+
+
+@-webkit-keyframes kiri {
+    0% {-webkit-transform:translateX(-20px);
+        z-index:200;
+    }
+    50%{-webkit-transform:translateX(20px);
+    }
+    100%{-webkit-transform:translateX(-20px);
+    }
+}
+
+@-moz-keyframes kiri {
+    0% {-moz-transform:translateX(-20px);
+        z-index:200;
+    }
+    50%{-moz-transform:translateX(20px);
+    }
+    100%{-moz-transform:translateX(-20px);
+    }
+}
+@-o-keyframes kiri {
+    0% {-o-transform:translateX(-20px);
+        z-index:200;
+    }
+    50%{-o-transform:translateX(20px);
+    }
+    100%{-o-transform:translateX(-20px);
+    }
+}
+
+#svg
+{
+    width: 100vmin;
+    overflow: visible;
+}
+
+#red-path, #blue-path
+{
+    display: none;
+}
+
+.smoke
+{
+    fill: white;
+    opacity: 0.4;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #url{
+        border: 0.2rem solid #389595;
+        border-bottom: 0;
+    }
+
+    #squeeze{
+        border: 0.2rem solid #c99d28;
+        border-top: 0;
+        border-bottom: 0;
+    }
+    #result{
+        padding-bottom: 20rem;
+    }
+}

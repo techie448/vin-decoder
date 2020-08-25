@@ -216,18 +216,13 @@ a {
     form {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
-    #url{
+    #VIN{
         border: 0.2rem solid #389595;
         border-bottom: 0;
     }
 
-    #squeeze{
-        border: 0.2rem solid #c99d28;
-        border-top: 0;
-        border-bottom: 0;
-    }
     #result{
         padding-bottom: 20rem;
     }
